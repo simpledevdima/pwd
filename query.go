@@ -71,7 +71,7 @@ func (q *query) getResponse() (*http.Response, error) {
 	return response, nil
 }
 
-func (q *query) SetProxy(prx *proxy) {
+func (q *query) SetProxy(prx *Proxy) {
 	fmt.Printf("set proxy %s:%d\n", prx.ip, prx.port)
 	prxParse, err := url.Parse(fmt.Sprintf("tls://%s:%d", prx.ip, prx.port))
 	if err != nil {

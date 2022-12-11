@@ -14,5 +14,5 @@ func NewParser(timeout time.Duration) Parser {
 type Parser interface {
 	Parse(url string) (*http.Response, error)
 	SetUserAgent(userAgent string)
-	SetProxy(prx *proxy)
+	SetProxy(prx *Proxy)
 }
