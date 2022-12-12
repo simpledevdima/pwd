@@ -14,7 +14,7 @@ func NewSelenium() *Selenium {
 	s.paths.chromeDriver = os.Getenv("GOPATH") + "/src/github.com/tebeka/selenium/vendor/chromedriver"
 	s.port = 4444
 	s.timeout = 60
-	s.debug = true
+	s.debug = false
 	return s
 }
 
