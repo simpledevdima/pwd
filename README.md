@@ -3,7 +3,7 @@
 
 ## Install
 ```
-go get go get github.com/skvdmt/pwd 
+go get github.com/skvdmt/pwd 
 ```
 
 ## Example
