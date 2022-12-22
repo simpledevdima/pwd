@@ -7,6 +7,6 @@ create table if not exists proxies
     working      enum ('U', 'Y', 'N') default 'U'               null comment 'Is the proxy server working? U - Unknown, Y - Yes, N - No',
     ip           varchar(15)                                    not null comment 'IP address of the proxy server',
     port         mediumint                                      not null comment 'Proxy server port',
-    type         enum ('ssl', 'http') default 'ssl'             not null comment 'Proxy server type'
+    type         enum ('ssl', 'http')                           not null comment 'Proxy server type'
 )
     comment 'Table with proxy server addresses';
