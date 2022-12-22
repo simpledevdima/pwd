@@ -7,11 +7,11 @@ import (
 )
 
 // NewProxies returns a data feed with links to proxy servers from the database
-func NewProxies(db *sql.DB) *Proxies {
+func NewProxies(db *sql.DB, type_ string) *Proxies {
 	prxs := make(Proxies)
 	go func() {
 		for {
-			rows, err := db.Query("select `id`, `ip`, `port` from `proxies` where `working` = 'U' or `working` = 'Y' order by `dt_last_used`, `dt_create` limit 100")
+			rows, err := db.Query("select `id`, `ip`, `port` from `proxies` where `type` = ? && `working` = 'U' or `working` = 'Y' order by `dt_last_used`, `dt_create` limit 100", type_)
 			if err != nil {
 				log.Println(err)
 			}
