@@ -3,7 +3,7 @@
 
 ## Install
 ```
-go get github.com/simpledevdima/pwd 
+go get github.com/skvdmt/pwd 
 ```
 
 ## Example
@@ -12,7 +12,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/simpledevdima/pwd"
+	"github.com/skvdmt/pwd"
 	"net/url"
 	"strings"
 )
